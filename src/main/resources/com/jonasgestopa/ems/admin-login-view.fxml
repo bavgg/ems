@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<GridPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER" hgap="10" vgap="10" fx:controller="com.jonasgestopa.ems.AdminLoginController">
+
+    <!-- Padding around the GridPane -->
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+
+    <!-- Title -->
+    <Label text="Admin Login" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" style="-fx-font-size: 24px;"/>
+
+    <!-- Username Label and TextField -->
+    <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <!-- Password Label and PasswordField -->
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <!-- Login Button -->
+    <Button text="Login" fx:id="loginButton" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.halignment="RIGHT"/>
+
+</GridPane>

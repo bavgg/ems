@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" prefHeight="600" prefWidth="800" fx:controller="com.jonasgestopa.ems.MainController">
+    <!-- Sidebar -->
+    <left>
+        <VBox spacing="10" style="-fx-padding: 10; -fx-background-color: #ffcccc;">
+            <Label text="Welcome Admin" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+            <Button fx:id="homeButton" text="Home" style="-fx-background-color: #cc0000; -fx-text-fill: white;" />
+            <Button fx:id="employeeButton" text="Add Employee" style="-fx-background-color: #cc0000; -fx-text-fill: white;" />
+            <Button fx:id="salaryButton" text="Employee Salary" style="-fx-background-color: #cc0000; -fx-text-fill: white;" />
+            <Button fx:id="logoutButton" text="Logout" style="-fx-background-color: #cc0000; -fx-text-fill: white;" />
+        </VBox>
+    </left>
+
+    <!-- Main Content -->
+    <center>
+        <VBox spacing="15" style="-fx-padding: 10; -fx-background-color: #ffffff;" fx:id="mainContainer">
+            <!-- Main content goes here -->
+        </VBox>
+    </center>
+</BorderPane>

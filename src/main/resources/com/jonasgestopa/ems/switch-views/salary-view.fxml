@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<HBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jonasgestopa.ems.Controllers.SalaryController" spacing="10" alignment="CENTER" style="-fx-padding: 10; -fx-background-color: #ffcccc;">
+    
+    <GridPane hgap="10" vgap="10" style="-fx-padding: 10; -fx-background-color: #ffffff;">
+        <!-- Column constraints to make all columns equal width -->
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" minWidth="100"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+
+        <!-- Row 1 -->
+        <Label text="Employee ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="employeeIdField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <!-- Row 2 -->
+        <Label text="First Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="firstNameField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <!-- Row 3 -->
+        <Label text="Last Name:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="lastNameField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <!-- Row 4 -->
+        <Label text="Position:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="positionField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <!-- Row 5 -->
+        <Label text="Salary:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="salaryField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <!-- Buttons -->
+        <HBox spacing="10" GridPane.rowIndex="5" GridPane.columnIndex="1" alignment="CENTER">
+            <Button text="Clear" style="-fx-background-color: #cc0000; -fx-text-fill: white;" />
+            <Button text="Update" style="-fx-background-color: #cc0000; -fx-text-fill: white;" />
+        </HBox>
+    </GridPane>
+
+    <!-- Table to display employee data -->
+    <TableView fx:id="employeeTable" style="-fx-background-color: #ffffff;">
+        <columns>
+            <TableColumn text="Employee ID" fx:id="employeeIdColumn"/>
+            <TableColumn text="First Name" fx:id="firstNameColumn"/>
+            <TableColumn text="Last Name" fx:id="lastNameColumn"/>
+            <TableColumn text="Position" fx:id="positionColumn"/>
+            <TableColumn text="Salary" fx:id="salaryColumn"/>
+        </columns>
+    </TableView>
+
+</HBox>

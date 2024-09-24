@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.jonasgestopa.ems.Controllers.HomeController" style="-fx-background-color: #ffcccc;">
+    <VBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+        <!-- Title -->
+        <Label text="Employee Dashboard" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <!-- Total Numbers -->
+        <HBox spacing="20" alignment="CENTER">
+            <VBox>
+                <Label text="Total Employees:" />
+                <Label fx:id="totalEmployeesLabel" text="0" />
+            </VBox>
+            <VBox>
+                <Label text="Total Present:" />
+                <Label fx:id="totalPresentLabel" text="0" />
+            </VBox>
+            <VBox>
+                <Label text="Inactive Employees:" />
+                <Label fx:id="inactiveEmployeesLabel" text="0" />
+            </VBox>
+        </HBox>
+
+        <!-- Employee Data Chart -->
+        <BarChart fx:id="employeeChart" prefWidth="600" prefHeight="400" style="-fx-background-color: #ffffff;">
+            <xAxis>
+                <CategoryAxis label="Category" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Number of Employees" />
+            </yAxis>
+        </BarChart>
+    </VBox>
+</AnchorPane>
