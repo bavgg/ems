@@ -10,7 +10,7 @@
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.jonasgestopa.ems.Controllers.HomeController" style="-fx-background-color: #ffcccc;">
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:id="homeView" fx:controller="com.jonasgestopa.ems.Controllers.HomeController" style="-fx-background-color: #ffcccc;">
     <VBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
         <!-- Title -->
         <Label text="Employee Dashboard" style="-fx-font-size: 24px; -fx-font-weight: bold;" />

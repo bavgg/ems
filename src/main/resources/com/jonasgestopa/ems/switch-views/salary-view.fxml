@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 
 
-<HBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jonasgestopa.ems.Controllers.SalaryController" spacing="10" alignment="CENTER" style="-fx-padding: 10; -fx-background-color: #ffcccc;">
+<HBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:id="salaryView" fx:controller="com.jonasgestopa.ems.Controllers.SalaryController" spacing="10" alignment="CENTER" style="-fx-padding: 10; -fx-background-color: #ffcccc;">
     
     <GridPane hgap="10" vgap="10" style="-fx-padding: 10; -fx-background-color: #ffffff;">
         <!-- Column constraints to make all columns equal width -->

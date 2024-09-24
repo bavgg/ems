@@ -6,6 +6,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+
 <BorderPane xmlns:fx="http://javafx.com/fxml" prefHeight="600" prefWidth="800" fx:controller="com.jonasgestopa.ems.MainController">
     <!-- Sidebar -->
     <left>
@@ -22,6 +26,18 @@
     <center>
         <VBox spacing="15" style="-fx-padding: 10; -fx-background-color: #ffffff;" fx:id="mainContainer">
             <!-- Main content goes here -->
+
+            <!-- Employee view -->
+            <fx:include fx:id="employeeNode" source="switch-views/employee-view.fxml" />
+
+            <!-- Salary view -->
+            <fx:include fx:id="salaryNode" source="switch-views/salary-view.fxml" />
+ 
+
+            <!-- Home view -->
+            <fx:include fx:id="homeNode" source="switch-views/home-view.fxml" />
+
+
         </VBox>
     </center>
 </BorderPane>
