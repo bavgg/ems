@@ -29,7 +29,7 @@ Before you begin, ensure you have the following installed:
 
 - **Java Development Kit (JDK)**: [Download JDK 21](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html)
 - **SQLite3**: SQLite is included as a dependency in the project.
-- **Maven**: 
+- **Maven**: [Download Maven](https://maven.apache.org/download.cgi)
 
 ## Project Structure
 
