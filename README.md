@@ -1,7 +1,3 @@
-Here’s a sample `README.md` file for your Employment Management System project in JavaFX with SQLite3:
-
----
-
 # Employment Management System
 
 ## Overview
