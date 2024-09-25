@@ -23,22 +23,26 @@
             <TableColumn fx:id="genderColumn" text="Gender" />
             <TableColumn fx:id="phoneNumColumn" text="Phone Number" />
             <TableColumn fx:id="positionColumn" text="Position" />
-            <TableColumn fx:id="imageColumn" text="Image" />
-            <TableColumn fx:id="salaryColumn" text="Salary" />
         </columns>
     </TableView>
 
     <!-- Form for Update/Delete/Add -->
     <VBox spacing="10">
-        <TextField fx:id="nameField" promptText="Name" style="-fx-background-color: #ffffff;" />
-        <TextField fx:id="positionField" promptText="Position" style="-fx-background-color: #ffffff;" />
-        <TextField fx:id="salaryField" promptText="Salary" style="-fx-background-color: #ffffff;" />
+        <TextField fx:id="firstNameTextField" promptText="First Name" style="-fx-background-color: #ffffff;" />
+        <TextField fx:id="lastNameTextField" promptText="Last Name" style="-fx-background-color: #ffffff;" />
+        <HBox spacing="10">
+            <RadioButton text="Male" toggleGroup="$genderToggleGroup" fx:id="maleRadioButton" />
+            <RadioButton text="Female" toggleGroup="$genderToggleGroup" fx:id="femaleRadioButton" />
+            <RadioButton text="Other" toggleGroup="$genderToggleGroup" fx:id="otherRadioButton" />
+        </HBox>
+        <TextField fx:id="phoneNumberTextField" promptText="Phone Number" style="-fx-background-color: #ffffff;" />
+        <ComboBox promptText="Choose" fx:id="positionComboBox" prefWidth="200"/>
 
         <HBox spacing="10">
-            <Button fx:id="addEmployeeButton" text="Add" style="-fx-background-color: #cc0000; -fx-text-fill: white;" />
-            <Button fx:id="updateEmployeeButton" text="Update" style="-fx-background-color: #cc0000; -fx-text-fill: white;" />
-            <Button fx:id="deleteEmployeeButton" text="Delete" style="-fx-background-color: #cc0000; -fx-text-fill: white;" />
-            <Button text="Clear" style="-fx-background-color: #cc0000; -fx-text-fill: white;" />
+            <Button fx:id="addButton" text="Add" style="-fx-background-color: #cc0000; -fx-text-fill: white;" />
+            <Button fx:id="updateButton" text="Update" style="-fx-background-color: #cc0000; -fx-text-fill: white;" />
+            <Button fx:id="deleteButton" text="Delete" style="-fx-background-color: #cc0000; -fx-text-fill: white;" />
+            <Button fx:id="clearButton" text="Clear" style="-fx-background-color: #cc0000; -fx-text-fill: white;" />
         </HBox>
     </VBox>
 </VBox>

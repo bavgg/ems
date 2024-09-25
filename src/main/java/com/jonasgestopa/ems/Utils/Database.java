@@ -13,8 +13,10 @@ import com.jonasgestopa.ems.MainApplication;
 
 public class Database {
     public Connection getConnection() throws SQLException {
-        String dbUrl = loadDatabaseFromResources("database/ems.db", "appdata/test.db");
+        
+        String dbUrl = loadDatabaseFromResources("database/ems.db", "ems_data/ems.db");
         assert dbUrl != null;
+        System.out.println("Database URL is: "+dbUrl);
         return DriverManager.getConnection(dbUrl);
     }
 
@@ -28,9 +30,12 @@ public class Database {
                 return null;
             }
 
-            File permanentDb = new File(destinationPath);
-            permanentDb.getParentFile().mkdirs(); // Ensure directory exists
-            Files.copy(dbStream, permanentDb.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            String userHome = System.getProperty("user.home");
+            File permanentDb = new File(userHome, destinationPath);
+            
+            if(permanentDb.getParentFile().mkdirs()) {
+                Files.copy(dbStream, permanentDb.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            }
 
             String url = "jdbc:sqlite:" + permanentDb.getAbsolutePath();
             System.out.println("Database URL: " + url);

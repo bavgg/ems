@@ -16,32 +16,30 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
     private PreparedStatement prepare;
     private ResultSet result;
 
-    @Override
+   
     public void addEmployee(Employee employee) {
-        String sql = "INSERT INTO employee "
-                + "(employee_id,firstName,lastName,gender,phoneNum,position,image,salary) "
-                + "VALUES(?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO employees "
+                + "(first_name,last_name,gender,phone_number,position) "
+                + "VALUES(?,?,?,?,?)";
 
         try {
             connect = db.getConnection();
             prepare = connect.prepareStatement(sql);
-            prepare.setInt(1, employee.getEmployeeId());
-            prepare.setString(2, employee.getFirstName());
-            prepare.setString(3, employee.getLastName());
-            prepare.setString(4, employee.getGender());
-            prepare.setInt(5, employee.getPhoneNum());
-            prepare.setString(6, employee.getPosition());
-            prepare.setString(7, employee.getImage());
-            prepare.setDouble(8, employee.getSalary());
+            prepare.setString(1, employee.getFirstName());
+            prepare.setString(2, employee.getLastName());
+            prepare.setString(3, employee.getGender());
+            prepare.setInt(4, employee.getPhoneNum());
+            prepare.setString(5, employee.getPosition());
+            
             prepare.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    @Override
+
     public void updateEmployee(Employee employee) {
-        String sql = "UPDATE employee SET firstName = ?, lastName = ?, gender = ?, phoneNum = ?, position = ?, image = ?, salary = ? WHERE employee_id = ?";
+        String sql = "UPDATE employees SET first_name = ?, last_name = ?, gender = ?, phone_number = ?, position = ? WHERE employee_id = ?";
 
         try {
             connect = db.getConnection();        
@@ -51,18 +49,16 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
             prepare.setString(3, employee.getGender());
             prepare.setInt(4, employee.getPhoneNum());
             prepare.setString(5, employee.getPosition());
-            prepare.setString(6, employee.getImage());
-            prepare.setDouble(7, employee.getSalary());
-            prepare.setInt(8, employee.getEmployeeId());
+            prepare.setInt(6, employee.getEmployeeId());
             prepare.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    @Override
+
     public void deleteEmployee(int employeeId) {
-        String sql = "DELETE FROM employee WHERE employee_id = ?";
+        String sql = "DELETE FROM employees WHERE employee_id = ?";
         try {
             connect = db.getConnection();        
             prepare = connect.prepareStatement(sql);
@@ -73,7 +69,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
         }
     }
 
-    @Override
+
     public List<Employee> getAllEmployees() {
         List<Employee> employees = new ArrayList<>();
         String sql = "SELECT * FROM employees";
@@ -103,7 +99,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
         return employees;
     }
 
-    @Override
+
     public int getTotalEmployees() {
         String sql = "SELECT COUNT(id) FROM employee";
         int countData = 0;
@@ -122,7 +118,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
         return countData;
     }
 
-    @Override
+
     public int getTotalPresentEmployees() {
         String sql = "SELECT COUNT(id) FROM employee_info";
         int countData = 0;
@@ -141,7 +137,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
         return countData;
     }
 
-    @Override
+
     public int getTotalInactiveEmployees() {
         String sql = "SELECT COUNT(id) FROM employee_info WHERE salary = '0.0'";
         int countData = 0;

@@ -71,10 +71,10 @@ public class MainController {
 
         homeView.setVisible(false);
         homeView.setManaged(false);
-        salaryView.setVisible(true);
-        salaryView.setManaged(true);
-        employeeView.setVisible(false);
-        employeeView.setManaged(false);
+        employeeView.setVisible(true);
+        employeeView.setManaged(true);
+        salaryView.setVisible(false);
+        salaryView.setManaged(false);
 
         employeeButton.setOnAction(event -> setMain("employee-view"));
         homeButton.setOnAction(event -> setMain("home-view"));

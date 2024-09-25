@@ -10,6 +10,25 @@ public class Employee {
     private String image;
     private Double salary;
 
+    public Employee(Integer employeeId, String firstName, String lastName, String gender, Integer phoneNum, String position) {
+        this.employeeId = employeeId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.phoneNum = phoneNum;
+        this.position = position;
+
+    }
+
+    public Employee( String firstName, String lastName, String gender, Integer phoneNum, String position) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.phoneNum = phoneNum;
+        this.position = position;
+
+    }
+
     public Employee(int employeeId, String firstName, String lastName, String gender, Integer phoneNum, String position, String image, Double salary) {
         this.employeeId = employeeId;
         this.firstName = firstName;
@@ -19,6 +38,10 @@ public class Employee {
         this.position = position;
         this.image = image;
         this.salary = salary;
+    }
+
+    public String toString() {
+        return "Employee{name='" + firstName + "', gender=" + gender + ", position='" + position + "'}";
     }
 
     public Integer getEmployeeId(){
