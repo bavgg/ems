@@ -104,6 +104,20 @@ ems/
    cd target
    mkdir lib
    ```
+2. **Add SQLite3 dependencies to the lib**
+3. **Move ems-1.0-SNAPSHOT.jar to the lib folder**
+4. **Make JAR file**
+   ```bash
+   mvn package
+   ```
+6. **Create package, For Windows:**
+   ```bash
+   jpackage --name "EMS" --type exe --input .\lib --dest . --main-jar .\ems-1.0-SNAPSHOT.jar --main-class com.jonasgestopa.ems.MainApplication --module-path %JAVAFX_JMODS_21% --add-modules javafx.controls,javafx.fxml,java.sql --win-shortcut --win-menu     
+   ```
+7. **For MacOS:**
+   ```bash
+   jpackage --name EMS --type dmg --input ./lib --dest . --main-jar ./ems-1.0-SNAPSHOT.jar --main-class com.jonasgestopa.ems.MainApplication --module-path $JAVAFX_JMODS_21 --add-modules javafx.controls,javafx.fxml,java.sql --mac-package-name “ems” --mac-package-identifier ems
+   ```
 
 ## Usage
 
