@@ -100,10 +100,9 @@ ems/
 
 1. **Move to the employment-management-system folder**
    ```bash
-  cd employment-management-system
-  cd target
-  mkdir lib
-  cp 
+   cd employment-management-system
+   cd target
+   mkdir lib
    ```
 
 ## Usage
