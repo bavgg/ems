@@ -18,6 +18,7 @@ The **Employment Management System** is a desktop application built using JavaFX
 - **JavaFX**: For building the user interface.
 - **SQLite3**: For storing and managing employee data.
 - **JDK 21**: The application is built and tested using JDK 21.
+- **Maven**: Build automation tool for Java.
 
 ## Prerequisites
 
