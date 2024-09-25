@@ -34,23 +34,53 @@ Before you begin, ensure you have the following installed:
 ## Project Structure
 
 ```
-EmploymentManagementSystem/
-│
-├── src/
-│   ├── main/
-│   │   ├── controller/
-│   │   │   └── EmployeeController.java  # Handles business logic
-│   │   ├── model/
-│   │   │   └── Employee.java            # Employee data model
-│   │   ├── view/
-│   │   │   └── employee.fxml            # UI Layout file
-│   │   └── Main.java                    # Application entry point
-│   └── resources/
-│       └── database.db                  # SQLite database file
-│
-├── README.md
-├── .gitignore
-└── employment_system.iml
+ems/
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+├── src
+│   └── main
+│       ├── java
+│       │   ├── com
+│       │   │   └── jonasgestopa
+│       │   │       └── ems
+│       │   └── module-info.java
+│       └── resources
+│           └── com
+│               └── jonasgestopa
+│                   └── ems
+├── target
+│   ├── EMS-1.0.dmg
+│   ├── classes
+│   │   ├── com
+│   │   │   └── jonasgestopa
+│   │   │       └── ems
+│   │   │           ├── AdminLoginController.class
+│   │   │           ├── Controllers
+│   │   │           ├── MainApplication.class
+│   │   │           ├── MainController.class
+│   │   │           ├── Models
+│   │   │           ├── Repositories
+│   │   │           ├── Utils
+│   │   │           ├── admin-login-view.fxml
+│   │   │           ├── database
+│   │   │           ├── main-view.fxml
+│   │   │           └── switch-views
+│   │   └── module-info.class
+│   ├── generated-sources
+│   │   └── annotations
+│   ├── lib
+│   │   ├── ems-1.0-SNAPSHOT.jar
+│   │   ├── slf4j-api-2.0.16.jar
+│   │   └── sqlite-jdbc-3.44.1.0.jar
+│   ├── maven-archiver
+│   │   └── pom.properties
+│   └── maven-status
+│       └── maven-compiler-plugin
+│           └── compile
+│               └── default-compile
+│                   ├── createdFiles.lst
+│                   └── inputFiles.lst
 ```
 
 ## Installation
