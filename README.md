@@ -29,6 +29,7 @@ Before you begin, ensure you have the following installed:
 
 - **Java Development Kit (JDK)**: [Download JDK 21](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html)
 - **SQLite3**: SQLite is included as a dependency in the project.
+- **Maven**: 
 
 ## Project Structure
 
@@ -62,14 +63,11 @@ EmploymentManagementSystem/
    ```
 
 2. **Open the project in IntelliJ IDEA or your preferred IDE**.
-   
-3. **Download SQLite JDBC dependencies**:
-   If not already present, you can add SQLite JDBC to your project. Download it from: 
-  https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc/3.46.1.0
-  https://mvnrepository.com/artifact/org.slf4j/slf4j-api/2.0.16
 
-4. **Run the Application**:
-   Locate the `Main.java` file and run it to start the application.
+3. **Run the Application**:
+   ```bash
+   mvn javafx:run
+   ```
 
 ## Creating Package
 
